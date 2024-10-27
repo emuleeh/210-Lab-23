@@ -1,4 +1,4 @@
-//COMSC 210 | Lab 23 | Emily  
+//COMSC 210 | Lab 23 | Emily
 
 #include <iostream>
 #include <fstream>
@@ -36,6 +36,7 @@ int main() {
     
     return 0;
 }
+
 
 
 
