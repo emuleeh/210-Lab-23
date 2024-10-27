@@ -4,6 +4,7 @@
 #include <fstream>
 #include <iomanip>
 #include <list>
+#include <string>
 #include "Goat.h"
 using namespace std;
 
@@ -31,6 +32,9 @@ int main() {
     while (fin1 >> colors[i++]);
     fin1.close();
     
+    //create list of goats
+    list<Goat> trip;
+    
     //Select menu options
     main_menu();
     
@@ -56,20 +60,23 @@ int main_menu() {
             cout << "\tChoice --> ";
         }
     }
-    if choice == 1 {
+    if (choice == 1) {
         add_goat(trip, names, colors);
     }
-    else if choice == 2 {
+    else if (choice == 2) {
         delete_goat(trip);
     }
-    else if choice == 3 {
+    else if (choice == 3) {
         display_trip(trip);
     }
-    else if choice == 4 {
-        "
+    else if (choice == 4) {
+        cout << " " << endl;
     }
     
 }
+
+//delete goat
+void delete_goat(list<Goat> )
 
 
 
