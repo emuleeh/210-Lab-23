@@ -31,12 +31,20 @@ int main() {
     while (fin1 >> colors[i++]);
     fin1.close();
     
+    //Select menu options
+    main_menu();
     
     
     
     return 0;
 }
 
+//Main menu function with options
+int main_menu() {
+    cout << "GOAT MANAGER 3001" << endl;
+    cout << "[1] Add a goat" << endl;
+    
+}
 
 
 
