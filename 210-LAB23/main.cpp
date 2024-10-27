@@ -42,7 +42,32 @@ int main() {
 //Main menu function with options
 int main_menu() {
     cout << "GOAT MANAGER 3001" << endl;
-    cout << "[1] Add a goat" << endl;
+    int choice = 0;
+    while (choice != 4) {
+        cout << "[1] Add a goat" << endl;
+        cout << "[2] Delete a goat" << endl;
+        cout << "[3] List goats" << endl;
+        cout << "[4] Quit" << endl;
+        cout << "Choice -->";
+        cin >> choice;
+        //input validation
+        while (choice < 1 || choice > 4) {
+            cout << "\tInvalid input. Please enter a value between 1 and 4." << endl;
+            cout << "\tChoice --> ";
+        }
+    }
+    if choice == 1 {
+        add_goat(trip, names, colors);
+    }
+    else if choice == 2 {
+        delete_goat(trip);
+    }
+    else if choice == 3 {
+        display_trip(trip);
+    }
+    else if choice == 4 {
+        "
+    }
     
 }
 
