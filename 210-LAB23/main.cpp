@@ -75,8 +75,40 @@ int main_menu() {
     
 }
 
+//select goat to delete
+int select_goat(list<Goat> trip) {
+    int choose;
+    cout << "Select which goat to delete: ";
+    //submenu with choices
+    display_trip(trip);
+    cin >> choose;
+    //input validation
+    while (choose < 1 || choose > trip.size()) {
+        cout << "\tInvalid input. Please enter a value between 1 and " << trip.size() << "." << endl;
+        cout << "Select which goat to delete: ";
+        cin >> choose;
+    }
+    return choose;
+}
+
+
 //delete goat
-void delete_goat(list<Goat> )
+void delete_goat(list<Goat> &trip) {
+    int choose = select_goat(trip);
+    auto it = trip.begin();
+    advance(it, choose - 1);
+    trip.erase(it);
+}
+
+//add goat
+void add_goat(list<Goat> &trip, string names[], string colors[]) {
+    string name, color;
+    int age;
+    cout << "Adding Goat: " << endl;
+    //randomly select a name and color from arrays
+    srand(time(0));
+    name = names[rand]
+}
 
 
 
