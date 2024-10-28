@@ -121,7 +121,7 @@ void add_goat(list<Goat> &trip, string names[], string colors[]) {
 //display goats
 void display_trip(list<Goat> trip) {
     int i = 1;
-    for (auto it = trip.begin(); it != trip.end(); ++it, i++) {
+    for (auto it = trip.begin(); it != trip.end(); it++, i++) {
         cout << "[" << i << "] ";
         cout << *it << " " << endl;
     }
