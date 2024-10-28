@@ -107,8 +107,23 @@ void add_goat(list<Goat> &trip, string names[], string colors[]) {
     cout << "Adding Goat: " << endl;
     //randomly select a name and color from arrays
     srand(time(0));
-    name = names[rand]
+    name = names[rand() % SZ_NAMES];
+    color = colors[rand() % SZ_COLORS];
+    
+    //randomly select age between 0 and MAX_AGE
+    age = rand() % (MAX_AGE + 1);
+    
+    //new Goat object to add to list
+    Goat new_goat(name, age, color);
+    trip.push_back(new_goat);
 }
 
-
+//display goats
+void display_trip(list<Goat> trip) {
+    int i = 1;
+    for (auto it = trip.begin(); it != trip.end(); ++it, i++) {
+        cout << "[" << i << "] ";
+        cout << *it << " " << endl;
+    }
+}
 
